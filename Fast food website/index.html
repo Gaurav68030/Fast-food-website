@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="FastFeast — Unified fast-food ordering website" />
+  <title>FastFeast — Fast • Fresh • Delivered Hot</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="ff-header">
+    <div class="ff-brand">
+      <a href="index.html" class="brand-link">
+        <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\logo.png" class="brand-logo" alt="Logo">
+        <div class="brand-text">
+          <span class="brand-title">FastFeast</span>
+          <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+        </div>
+      </a>
+    </div>
+
+    <nav class="ff-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="burger.html" class="nav-link">Menu</a>
+      <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+      <a href="checkout.html" class="nav-link">Checkout</a>
+      <a href="admin.html" class="nav-link">Admin</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <h1>Order from top brands — fast, easy, reliable.</h1>
+        <p class="lead">Browse brand-wise menus, customize meals, add to cart & checkout effortlessly.</p>
+
+        <div class="hero-actions">
+          <input id="searchInput" type="search" placeholder="Search Pizza, Biryani, Burger…" />
+          <button id="searchBtn" class="btn primary">Search</button>
+        </div>
+
+        <div class="hero-cats">
+          <button class="cat" data-category="burgers">Burgers</button>
+          <button class="cat" data-category="fries">Fries</button>
+          <button class="cat" data-category="pizza">Pizza</button>
+          <button class="cat" data-category="drinks">Drinks</button>
+          <button class="cat" data-category="dessert">Dessert</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\logo.png" class="hero-image" alt="Food">
+       
+    </div>
+
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="brands">
+    <h2>Brands</h2>
+
+    <div class="brand-grid">
+      <a class="brand-card" href="kfc.html">
+        <img src="images/kfc.jpeg" alt="KFC">
+        <span>KFC</span>
+      </a>
+      <a class="brand-card" href="mcdonalds.html">
+        <img src="images/mcdon.jpeg" alt="McDonald's">
+        <span>McDonald's</span>
+      </a>
+      <a class="brand-card" href="dominos.html">
+        <img src="images/dominopizza.jpeg" alt="Domino's">
+        <span>Domino's</span>
+      </a>
+      <a class="brand-card" href="burger.html">
+        <img src="images/burgerking.jpeg" alt="Burger King">
+        <span>Burger King</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- POPULAR ITEMS -->
+  <section class="popular">
+    <h2>Popular Items</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/burger.jpg" alt="Classic Burger">
+        <p class="card-title">Classic Burger</p>
+        <p class="card-price">₹150</p>
+        <button class="add-cart btn"
+                data-id="burger1"
+                data-name="Classic Burger"
+                data-price="150"
+                data-img="images/burger.jpg">
+          Add to cart
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="images/pizza.jpg" alt="Pizza">
+        <p class="card-title">Margherita Pizza</p>
+        <p class="card-price">₹220</p>
+        <button class="add-cart btn"
+                data-id="pizza1"
+                data-name="Margherita Pizza"
+                data-price="220"
+                data-img="images/pizza.jpg">
+          Add to cart
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="images/franchfries.jpg" alt="Fries">
+        <p class="card-title">Classic Fries</p>
+        <p class="card-price">₹80</p>
+        <button class="add-cart btn"
+                data-id="fries1"
+                data-name="Classic Fries"
+                data-price="80"
+                data-img="images/franchfries.jpg">
+          Add to cart
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\coke.jpeg" alt="Coke">
+        <p class="card-title">Coke (500ml)</p>
+        <p class="card-price">₹50</p>
+        <button class="add-cart btn"
+                data-id="drink1"
+                data-name="Coke 500ml"
+                data-price="50"
+                data-img="images/softdrink.jpg">
+          Add to cart
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="ff-footer">
+    <small>© <span id="year"></span> FastFeast</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

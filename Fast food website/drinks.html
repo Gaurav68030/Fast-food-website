@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastFeast — Drinks Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="logo">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- PAGE TITLE -->
+<section class="brands">
+  <h2>Beverages & Soft Drinks 🥤</h2>
+  <p class="small">Cold, refreshing drinks to complete your meal.</p>
+</section>
+
+
+<!-- DRINKS GRID -->
+<section class="popular">
+  <div class="grid">
+
+    <!-- ITEM 1 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\coke.jpeg" alt="Coke">
+      <p class="card-title">Coke (500ml)</p>
+      <p class="card-price">₹50</p>
+      <button class="add-cart btn"
+              data-id="drink1"
+              data-name="Coke (500ml)"
+              data-price="50"
+              data-img="images/softdrink.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card">
+      <img src="images/pepsi.jpeg" alt="Pepsi">
+      <p class="card-title">Pepsi (500ml)</p>
+      <p class="card-price">₹50</p>
+      <button class="add-cart btn"
+              data-id="drink2"
+              data-name="Pepsi (500ml)"
+              data-price="50"
+              data-img="images/softdrink.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card">
+      <img src="images/softdrink.jpg" alt="Sprite">
+      <p class="card-title">Sprite (500ml)</p>
+      <p class="card-price">₹50</p>
+      <button class="add-cart btn"
+              data-id="drink3"
+              data-name="Sprite (500ml)"
+              data-price="50"
+              data-img="images/softdrink.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\shake.jpeg" alt="Mango Shake">
+      <p class="card-title">Mango Shake</p>
+      <p class="card-price">₹120</p>
+      <button class="add-cart btn"
+              data-id="drink4"
+              data-name="Mango Shake"
+              data-price="120"
+              data-img="images/softdrink.jpg">
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="ff-footer">
+  <small>© <span id="year"></span> FastFeast</small>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

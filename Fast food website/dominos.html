@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastFeast — Domino's Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="logo">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- PAGE TITLE -->
+<section class="brands">
+  <h2>Domino’s Pizza Menu 🍕</h2>
+  <p class="small">Fresh oven-baked pizzas straight from Domino’s.</p>
+</section>
+
+
+<!-- MENU GRID -->
+<section class="popular">
+  <div class="grid">
+
+    <!-- ITEM 1 -->
+    <div class="card">
+      <img src="images/dominopizza.jpeg" alt="Margherita">
+      <p class="card-title">Margherita Pizza</p>
+      <p class="card-price">₹220</p>
+      <button class="add-cart btn"
+              data-id="dom1"
+              data-name="Margherita Pizza"
+              data-price="220"
+              data-img="images/dominopizza.jpeg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card">
+      <img src="images/pizza.jpg" alt="Farmhouse Pizza">
+      <p class="card-title">Farmhouse Pizza</p>
+      <p class="card-price">₹340</p>
+      <button class="add-cart btn"
+              data-id="dom2"
+              data-name="Farmhouse Pizza"
+              data-price="340"
+              data-img="images/pizza.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card">
+      <img src="images/pizza.jpg" alt="Peppy Paneer Pizza">
+      <p class="card-title">Peppy Paneer Pizza</p>
+      <p class="card-price">₹300</p>
+      <button class="add-cart btn"
+              data-id="dom3"
+              data-name="Peppy Paneer Pizza"
+              data-price="300"
+              data-img="images/pizza.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card">
+      <img src="images/pizza.jpg" alt="Veg Extravaganza">
+      <p class="card-title">Veg Extravaganza</p>
+      <p class="card-price">₹380</p>
+      <button class="add-cart btn"
+              data-id="dom4"
+              data-name="Veg Extravaganza"
+              data-price="380"
+              data-img="images/pizza.jpg">
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="ff-footer">
+  <small>© <span id="year"></span> FastFeast</small>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

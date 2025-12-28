@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart — FastFeast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-cart">
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link active">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- CART PAGE -->
+<div class="cart-page">
+
+  <!-- LEFT: ITEMS -->
+  <div id="cart-items"></div>
+
+  <!-- RIGHT: SUMMARY -->
+  <div class="cart-summary">
+    <h3>Order Summary</h3>
+
+    <p>Subtotal: <span id="subtotal">₹0</span></p>
+    <p>Tax (5%): <span id="tax">₹0</span></p>
+    <p>Delivery Fee: <span>₹30</span></p>
+
+    <hr>
+
+    <p class="total">Total: <span id="total">₹0</span></p>
+
+    <button class="btn primary" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+
+</div>
+
+
+<!-- CART PAGE JS -->
+<script>
+// Load cart
+document.addEventListener("DOMContentLoaded", loadCartPage);
+
+function loadCartPage() {
+    const container = document.getElementById("cart-items");
+    const cart = getCart();
+
+    if (cart.length === 0) {
+        container.innerHTML = "<h2>Your cart is empty.</h2>";
+        document.getElementById("subtotal").textContent = "₹0";
+        document.getElementById("tax").textContent = "₹0";
+        document.getElementById("total").textContent = "₹30";
+        return;
+    }
+
+    container.innerHTML = "";
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.qty;
+
+        container.innerHTML += `
+        <div class="cart-item">
+            <img src="${item.img}" class="cart-thumb">
+
+            <div class="cart-info">
+                <h4>${item.name}</h4>
+                <p>₹${item.price}</p>
+
+                <div class="qty-box">
+                    <button onclick="updateQty('${item.id}', -1)">−</button>
+                    <span>${item.qty}</span>
+                    <button onclick="updateQty('${item.id}', 1)">+</button>
+                </div>
+
+                <button class="remove-btn" onclick="removeItem('${item.id}')">
+                  Remove
+                </button>
+            </div>
+        </div>`;
+    });
+
+    let tax = subtotal * 0.05;
+    let total = subtotal + tax + 30;
+
+    document.getElementById("subtotal").textContent = "₹" + subtotal.toFixed(2);
+    document.getElementById("tax").textContent = "₹" + tax.toFixed(2);
+    document.getElementById("total").textContent = "₹" + total.toFixed(2);
+}
+
+function updateQty(id, change) {
+    let cart = getCart();
+    let item = cart.find(i => i.id === id);
+
+    if (!item) return;
+
+    item.qty += change;
+    if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+
+    saveCart(cart);
+    loadCartPage();
+}
+
+function removeItem(id) {
+    let cart = getCart().filter(i => i.id !== id);
+    saveCart(cart);
+    loadCartPage();
+}
+
+function checkout() {
+    window.location.href = "checkout.html";
+}
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

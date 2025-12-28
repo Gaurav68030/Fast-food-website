@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastFeast — Fries Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="Logo">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- PAGE TITLE -->
+<section class="brands">
+  <h2>Fries & Sides 🍟</h2>
+  <p class="small">Crispy, golden fries and delicious sides.</p>
+</section>
+
+
+<!-- MENU GRID -->
+<section class="popular">
+  <div class="grid">
+
+    <!-- ITEM 1 -->
+    <div class="card">
+      <img src="images/franchfries.jpg" alt="Classic Fries">
+      <p class="card-title">Classic Fries</p>
+      <p class="card-price">₹80</p>
+      <button class="add-cart btn"
+              data-id="fries1"
+              data-name="Classic Fries"
+              data-price="80"
+              data-img="images/franchfries.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\loadedfries.jpeg" alt="Peri Peri Fries">
+      <p class="card-title">Peri Peri Fries</p>
+      <p class="card-price">₹110</p>
+      <button class="add-cart btn"
+              data-id="fries2"
+              data-name="Peri Peri Fries"
+              data-price="110"
+              data-img="images/franchfries.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\loadedfries.jpeg" alt="Cheesy Fries">
+      <p class="card-title">Cheesy Fries</p>
+      <p class="card-price">₹130</p>
+      <button class="add-cart btn"
+              data-id="fries3"
+              data-name="Cheesy Fries"
+              data-price="130"
+              data-img="images/franchfries.jpg">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\potato wedges.jpeg" alt="Loaded Fries">
+      <p class="card-title">Loaded Fries</p>
+      <p class="card-price">₹150</p>
+      <button class="add-cart btn"
+              data-id="fries4"
+              data-name="Loaded Fries"
+              data-price="150"
+              data-img="images/franchfries.jpg">
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="ff-footer">
+  <small>© <span id="year"></span> FastFeast</small>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

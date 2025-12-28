@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastFeast — Desserts Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="Logo">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- PAGE TITLE -->
+<section class="brands">
+  <h2>Desserts & Shakes 🍰</h2>
+  <p class="small">Sweet treats to make your meal complete!</p>
+</section>
+
+
+<!-- MENU GRID -->
+<section class="popular">
+  <div class="grid">
+
+    <!-- ITEM 1 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\cho.png" alt="Chocolate Lava Cake">
+      <p class="card-title">Chocolate Lava Cake</p>
+      <p class="card-price">₹120</p>
+      <button class="add-cart btn"
+              data-id="dess1"
+              data-name="Chocolate Lava Cake"
+              data-price="120"
+              data-img="images/dessert.png">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\1440babc-ff4f-4b34-97c9-3d535660cde7.jpg" alt="Oreo Shake">
+      <p class="card-title">Oreo Shake</p>
+      <p class="card-price">₹150</p>
+      <button class="add-cart btn"
+              data-id="dess2"
+              data-name="Oreo Shake"
+              data-price="150"
+              data-img="images/dessert.png">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="card">
+      <img src="images/download.jpeg" alt="Strawberry Ice Cream">
+      <p class="card-title">Strawberry Ice Cream</p>
+      <p class="card-price">₹90</p>
+      <button class="add-cart btn"
+              data-id="dess3"
+              data-name="Strawberry Ice Cream"
+              data-price="90"
+              data-img="images/dessert.png">
+        Add to cart
+      </button>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="card">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\download (1).jpeg" alt="Brownie Fudge">
+      <p class="card-title">Brownie Fudge</p>
+      <p class="card-price">₹140</p>
+      <button class="add-cart btn"
+              data-id="dess4"
+              data-name="Brownie Fudge"
+              data-price="140"
+              data-img="images/dessert.png">
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="ff-footer">
+  <small>© <span id="year"></span> FastFeast</small>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

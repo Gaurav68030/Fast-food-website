@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastFeast — Burgers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo.png" class="brand-logo" alt="logo">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link active">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+
+<section class="brands">
+  <h2>Burger Collection 🍔</h2>
+  <p class="small">Choose your favourite freshly prepared burgers.</p>
+</section>
+
+
+
+<section class="popular">
+  <div class="grid">
+
+    
+    <div class="card">
+      <img src="images/burger.jpg" alt="Classic Burger">
+      <p class="card-title">Classic Burger</p>
+      <p class="card-price">₹150</p>
+      <button class="add-cart btn"
+              data-id="burger1"
+              data-name="Classic Burger"
+              data-price="150"
+              data-img="images/burger.jpg">
+        Add to cart
+      </button>
+    </div>
+
+ 
+    <div class="card">
+      <img src="images/burgerking.jpeg" alt="Cheese Burst Burger">
+      <p class="card-title">Cheese Burst Burger</p>
+      <p class="card-price">₹180</p>
+      <button class="add-cart btn"
+              data-id="burger2"
+              data-name="Cheese Burst Burger"
+              data-price="180"
+              data-img="images/burgerking.jpeg">
+        Add to cart
+      </button>
+    </div>
+
+   
+    <div class="card">
+      <img src="images/kfc.jpeg" alt="Double Patty Burger">
+      <p class="card-title">Double Patty Burger</p>
+      <p class="card-price">₹220</p>
+      <button class="add-cart btn"
+              data-id="burger3"
+              data-name="Double Patty Burger"
+              data-price="220"
+              data-img="images/kfc.jpeg">
+        Add to cart
+      </button>
+    </div>
+
+
+    <div class="card">
+      <img src="images/mcdon.jpeg" alt="Chicken Supreme Burger">
+      <p class="card-title">Chicken Supreme Burger</p>
+      <p class="card-price">₹250</p>
+      <button class="add-cart btn"
+              data-id="burger4"
+              data-name="Chicken Supreme Burger"
+              data-price="250"
+              data-img="images/mcdon.jpeg">
+        Add to cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="ff-footer">
+  <small>© <span id="year"></span> FastFeast</small>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

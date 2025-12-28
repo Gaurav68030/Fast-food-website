@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout — FastFeast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-checkout">
+
+<!-- NAVBAR -->
+<header class="ff-header">
+  <div class="ff-brand">
+    <a href="index.html" class="brand-link">
+      <img src="C:\Users\chira\OneDrive\Desktop\LAST AND FINAL PROJECT\images\logo.png" class="brand-logo" alt="">
+      <div class="brand-text">
+        <span class="brand-title">FastFeast</span>
+        <small class="brand-sub">Fast • Fresh • Delivered Hot</small>
+      </div>
+    </a>
+  </div>
+
+  <nav class="ff-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="burger.html" class="nav-link">Menu</a>
+    <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+    <a href="checkout.html" class="nav-link active">Checkout</a>
+    <a href="admin.html" class="nav-link">Admin</a>
+  </nav>
+</header>
+
+
+<!-- CHECKOUT PAGE -->
+<div class="cart-page">
+
+  <!-- LEFT SIDE -->
+  <div class="cart-list" id="checkoutSummary">
+    <!-- JS loads summary -->
+  </div>
+
+  <!-- RIGHT SIDE (FORM) -->
+  <div class="cart-summary">
+    <h3>Customer Details</h3>
+
+    <input type="text" id="name" class="form-input" placeholder="Full Name">
+    <input type="text" id="phone" class="form-input" placeholder="Phone Number">
+    <input type="text" id="address" class="form-input" placeholder="Delivery Address">
+
+    <button class="btn primary" id="placeOrderBtn">Place Order</button>
+    <button class="btn" id="clearCartBtn" style="background:#ddd;color:#333;margin-top:10px;">Clear Cart</button>
+  </div>
+
+</div>
+
+<style>
+.form-input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:15px;
+}
+</style>
+
+
+<script>
+// LOAD CHECKOUT SUMMARY
+document.addEventListener("DOMContentLoaded", loadCheckout);
+
+function loadCheckout() {
+    const el = document.getElementById("checkoutSummary");
+    const cart = getCart();
+    if (!el) return;
+
+    if (!cart.length) {
+        el.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+    }
+
+    let html = "<h3>Your Order</h3><ul class='small'>";
+    let total = 0;
+
+    cart.forEach(item => {
+        html += `<li>${item.name} x ${item.qty} — ₹${item.price * item.qty}</li>`;
+        total += item.price * item.qty;
+    });
+
+    let tax = total * 0.05;
+    let grand = total + tax + 30;
+
+    html += "</ul>";
+    html += `<p><strong>Subtotal:</strong> ₹${total.toFixed(2)}</p>`;
+    html += `<p><strong>Tax (5%):</strong> ₹${tax.toFixed(2)}</p>`;
+    html += `<p><strong>Delivery Fee:</strong> ₹30</p>`;
+    html += `<p class="total"><strong>Total: ₹${grand.toFixed(2)}</strong></p>`;
+
+    el.innerHTML = html;
+}
+
+// CLEAR CART
+document.getElementById("clearCartBtn").addEventListener("click", () => {
+    localStorage.removeItem("ff_cart");
+    alert("Cart cleared.");
+    window.location.href = "index.html";
+});
+
+// PLACE ORDER
+document.getElementById("placeOrderBtn").addEventListener("click", () => {
+
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+
+    if (!name || !phone || !address) {
+        alert("Please fill all details!");
+        return;
+    }
+
+    alert("Order Placed Successfully!\nYour food will arrive soon.");
+
+    localStorage.removeItem("ff_cart");
+    window.location.href = "index.html";
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
