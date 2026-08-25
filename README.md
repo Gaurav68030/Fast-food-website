@@ -1,3 +1,28 @@
-# Fast-food-website
-In today’s fast-paced lifestyle, fast-food delivery services have become an essential part of daily living. With the rapid expansion of global fast-food chains such as Burger King, KFC, Domino’s, and McDonald’s across India, users expect quick access to menus, smooth navigation, and a hassle-free ordering experience. However, many existing platforms are overloaded with complex features, leading to poor usability and inefficient user interaction.
-The Fast-Food Ordering Website project is designed to address these challenges by providing a simple, centralized, and user-friendly interface that allows users to browse multiple fast-food brands from a single platform. The website enables customers to select a brand, explore categorized menus, add items to a cart, and proceed through a clear and intuitive checkout process.
+# 🍔 FastFeast
+
+FastFeast is a food delivery web application where users can browse food items, search by category, add items to cart, and place orders.
+
+## 🚀 Features
+
+* Browse food items and brands
+* Search and category filtering
+* Add/remove items from cart
+* Increase/decrease quantity
+* Automatic subtotal, tax and delivery fee calculation
+* Customer checkout
+* Order confirmation
+* Admin section
+
+## 🛠️ Technologies
+
+* HTML
+* CSS
+* JavaScript
+
+## 📸 Screenshots
+
+Add screenshots of the Home, Menu, Cart and Checkout pages here.
+
+## 👨‍💻 Author
+
+**Gaurav Lather**
